@@ -1,0 +1,141 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>充电桩报表数据</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<link rel="stylesheet" type="text/css" href="./css/e1.css">
+</head> 
+<body>
+	<div class="container-fluid col-md-12 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 flex flex-column"> 
+		<div class="form-group flex flex-left" id="cnMap"> 
+			<select name="province" class="province form-control" id="province">
+			</select><img src="./img/3.png" alt="">
+			<select name="city" class="city form-control" disabled="disabled" id="city"></select><img src="./img/3.png" alt="">
+		</div>
+		<div class="the-date flex flex-center">
+			<ul>
+				<!-- 				<a href="#ye" class="active" data-toggle="tab">昨天</a> -->
+				<a href="#week" data-toggle="tab">7天前</a>
+				<a href="#month" data-toggle="tab">30天前</a>
+			</ul>	
+		</div>
+		<div class="tab-content">
+			<div class="tab-pane fade in active" id="ye">
+				<div class="electricity flex  flex-column">
+					<div class="electricity-head flex flex-row flex-center">
+						<hr>
+						<span>电量统计</span>
+						<hr>
+					</div>
+					<div class="electricity-echart" id="electricity-echart">
+
+					</div>
+				</div> 
+				<div class="money flex flex-column">
+					<div class="money-head flex flex-row flex-center">
+						<hr>
+						<span>金额统计</span>
+						<hr>
+					</div>
+					<div class="money-echart" id="money-echart">
+
+					</div>
+				</div>
+				<div class="device flex  flex-column">
+					<div class="device-head flex flex-row flex-center">
+						<hr class="device">
+						<span>设备正常运行状态比率</span>
+						<hr class="device">
+					</div>
+					<div class="device-echart" id="device-echart">
+
+					</div>
+				</div>
+				<div class="footer flex flex-center foot-echarts">
+					<span>海印蔚蓝数据提供</span>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="week">
+				<div class="electricity flex  flex-column ">
+					<div class="electricity-head flex flex-row flex-center">
+						<hr>
+						<span>电量统计</span>
+						<hr>
+					</div>
+					<div class="electricity-echart" id="electricity-echart-week">
+
+					</div>
+				</div> 
+				<div class="money flex flex-column">
+					<div class="money-head flex flex-row flex-center">
+						<hr>
+						<span>金额统计</span>
+						<hr>
+					</div>
+					<div class="money-echart" id="money-echart-week">
+
+					</div>
+				</div>
+				<div class="device flex  flex-column">
+					<div class="device-head flex flex-row flex-center">
+						<hr class="device">
+						<span>设备正常运行状态比率</span>
+						<hr class="device">
+					</div>
+					<div class="device-echart" id="device-echart-week">
+
+					</div>
+				</div>
+				<div class="footer flex flex-center foot-echarts">
+					<span>海印蔚蓝数据提供</span>
+				</div>
+			</div>
+			<div class="tab-pane fade" id="month">
+				<div class="electricity flex  flex-column">
+					<div class="electricity-head flex flex-row flex-center">
+						<hr>
+						<span>电量统计</span>
+						<hr>
+					</div>
+					<div class="electricity-echart" id="electricity-echart-month">
+
+					</div>
+				</div> 
+				<div class="money flex flex-column">
+					<div class="money-head flex flex-row flex-center">
+						<hr>
+						<span>金额统计</span>
+						<hr>
+					</div>
+					<div class="money-echart" id="money-echart-month">
+
+					</div>
+				</div>
+				<div class="device flex  flex-column">
+					<div class="device-head flex flex-row flex-center">
+						<hr class="device">
+						<span>设备正常运行状态比率</span>
+						<hr class="device">
+					</div>
+					<div class="device-echart" id="device-echart-month">
+
+					</div>
+				</div>
+				<div class="footer flex flex-center foot-echarts">
+					<span>海印蔚蓝数据提供</span>
+				</div>
+			</div>
+
+		</div>
+	</div>  
+</body> 
+</html>
+
+<script type="text/javascript" src="./js/jquery-2.1.1.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/echarts.js"></script>
+<script src="js/jquery.cxselect.js"></script>
+<script src="js/event.js"></script>
+</script>

@@ -1,0 +1,233 @@
+/*eform1*/
+/*充电桩报表开始*/
+html,body{
+	height:100%;
+	overflow:auto;
+}
+body{
+	background: url(../img/bg.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+@font-face {
+	font-family: 'city';   /*字体名称*/
+	src: url('../fonts/1.ttf');       /*字体源文件*/
+}
+ul,li,a{
+	list-style: none;
+	text-decoration:none;
+}
+.flex{
+	display:flex;
+}
+.flex-spacearound{
+	justify-content: space-around;
+}
+.flex-column{
+	flex-direction:column;
+}
+.flex-row{
+	flex-direction: row;
+}
+.flex-center{
+	justify-content: center;
+	align-items: center;
+}
+.flex-left{
+	align-content:left;
+	justify-content: left;
+}
+.header{
+	text-align: center;
+}
+.city1{
+	margin-top: -1em;
+}
+.header h1.gradient{
+	display: inline-block;
+	padding-bottom: 0.5em;
+	font-weight: 700;
+	font-size: 2.2em;
+	letter-spacing:1px; 
+	font-family:  "Microsoft YaHei bold";
+	background-image: radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -o-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -ms-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -moz-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -webkit-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.col-md-12,
+.col-sm-12,
+.col-xs-12{
+	padding: 0;
+}
+.city{
+	padding-top: 0.3em;
+	background: rgba(102, 255, 255,0.13);
+}
+.city1{
+	margin-top: 2em;
+}
+.city .caption{
+	font-size: 1.2em;
+	font-weight: 900;
+	color: #66ffff;
+	font-family: "Microsoft YaHei bold";
+	padding: 0 .3em;
+}
+.city .caption span.pinyin{
+	font-size: 0.6em;
+}
+.city .caption img{
+	width: 0.4em;
+}
+.city .content ul{
+	padding:.2em 0;
+}
+.city .content ul li{
+	display: block;
+	background: rgba(51,153,204,0.71);
+	height: 7em;
+	width:7em;
+	margin:0 .5em ;
+}
+.city .content ul li span{
+	display: flex;
+
+
+}
+.city .content ul li span:first-child{
+	margin-top: 1.7em;
+	margin-left: 0.5em;
+}
+.city .content ul li span:nth-child(2){
+	justify-content: center;
+	margin-top: -.1em;
+	letter-spacing: 1px;
+	font-size: 1.7em;
+	font-weight: 700;
+	color: #fff;
+}
+.city .content ul li span:first-child,
+.city .content ul li span:last-child{
+	font-weight: bold;
+	font-size: 0.8em;
+}
+.city .content ul li span:last-child{
+	font-size: 0.7em;
+	margin-top: -.6em;
+	margin-left: 7.8em;
+}
+.footer{
+	margin-top: 2em;
+	color: #fff;
+	letter-spacing: 2px;
+}
+/*充电桩报表结束*/
+/*充电桩的数据开始 echart*/
+#cnMap select {
+	margin-top: 1em;
+	font-weight: 900;
+	font-size: 1.2em;
+	letter-spacing:1px; 
+	z-index: 99;
+	font-family:  "Microsoft YaHei bold";
+	outline: none;
+	border: none;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	background-image: radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -o-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -ms-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -moz-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -webkit-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	-webkit-background-clip: text;
+/*	-webkit-text-fill-color: transparent;*/
+	select::-ms-expand { display: none; }
+}
+#cnMap select option{
+	overflow: hidden;
+}
+#cnMap img{
+	margin-top: 2em;
+	margin-left: -2em;
+	width: 14px;
+	height: 8px;
+}
+#cnMap select{
+	width: 8em;
+}
+#cnMap select.province{
+	width: 7em;
+}
+.the-date a{
+	margin: 0 0.3em;
+	letter-spacing: 1px;
+	font-weight: bold;
+	text-align: center;
+	width:4em;
+	height: 1.5em;
+	line-height: 1.5em;
+	display: inline-block;
+	background-image: radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -o-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -ms-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -moz-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	background-image: -webkit-radial-gradient(left bottom , ellipse cover , rgb(59, 206, 255) , rgb(52, 204, 255) 39% , rgb(55, 255, 255) 68% , rgb(52, 255, 255) 97%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 1.2em;
+}
+.the-date a:hover{
+	list-style: none;
+	text-decoration:none;
+	background-image: radial-gradient(rgb(102, 255, 255) , rgb(102, 255, 255) , rgb(102, 255, 255), rgb(102, 255, 255));
+	background-image: -o-radial-gradient(rgb(102, 255, 255) , rgb(102, 255, 255) , rgb(102, 255, 255), rgb(102, 255, 255));
+	background-image: -ms-radial-gradient(rgb(102, 255, 255) , rgb(102, 255, 255) , rgb(102, 255, 255), rgb(102, 255, 255));
+	background-image: -moz-radial-gradient(rgb(102, 255, 255) , rgb(102, 255, 255) , rgb(102, 255, 255), rgb(102, 255, 255));
+	background-image: -webkit-radial-gradient(rgb(102, 255, 255) , rgb(102, 255, 255) , rgb(102, 255, 255), rgb(102, 255, 255));
+	-webkit-background-clip:content-box;
+	-webkit-text-fill-color: #fff;
+	
+}
+.the-date ul{
+	padding-left: 0;
+}
+/*//电量统计*/
+.electricity .electricity-head span,
+.money .money-head span,
+.device .device-head span{
+	display: inline-block;
+	color:rgb(102, 255, 255);
+	width: 4em;
+	margin: 0 .5em;
+}
+.device .device-head span{
+	width: 10em;
+}
+hr{
+	display: inline-block;
+	padding: 0 4em;
+	border: 0.1px solid rgb(102, 255, 255);
+	height:0px;
+	border-right:0px;
+	border-bottom:0px;
+	border-left:0px;
+}
+hr.device{
+	padding: 0 2em;
+}
+.electricity-echart,
+.money-echart,
+.device-echart{
+	margin-top: -3em;
+	width: 21.5em;
+	height: 21.5em;
+	margin-bottom: 2em;
+}
+.foot-echarts{
+	margin-top: -2em;
+	margin-bottom: 2em;
+}
